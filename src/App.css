@@ -2,9 +2,22 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
   cursor: default;
   user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px 1px transparent;
+  border: solid 0px transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px 6px #676767;
+  border: solid 5px transparent;
 }
 
 .card {
@@ -15,18 +28,13 @@
   color: #888;
 }
 
-.profile-img {
-  position: relative;
-  top: -60px;
-  z-index: -1;
-}
-
 .glowing-underline {
   position: relative;
 }
 
 span.glowing-underline:after,
-a.glowing-underline:after {
+a.glowing-underline:after,
+button.glowing-underline:after {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -42,8 +50,34 @@ a.glowing-underline:after {
   height: 3px;
 }
 
+button.glowing-underline:after {
+  height: 3px;
+}
+
 .divider {
   background-color: #676767;
   height: 1px;
   border: 0;
+}
+
+.project-card {
+  background-color: #242424;
+  padding: 18px 32px;
+  border-radius: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-bottom: 1px solid #676767;
+  background-color: transparent;
+  outline: none;
+  padding: 12px 20px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-bottom: 1px solid #fefefe;
+  outline: none;
 }

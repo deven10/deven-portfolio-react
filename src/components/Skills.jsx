@@ -42,11 +42,13 @@ export const Skills = () => {
     },
   ];
   return (
-    <div className="pt-14 pb-14 text-left grid gap-10 grid-cols-5">
+    <div className="pt-14 pb-32 grid gap-10 grid-cols-5">
       {skills.map((skill) => (
         <div key={skill.skill} className="">
-          <p className="mb-2 text-[32px]">{skill.skill}</p>
-          <p className="m-0 text-[16px]">{skill.count}+ Years Experience</p>
+          <p className="mb-2 text-[32px] text-[#fff]">{skill.skill}</p>
+          <p className="m-0 text-[16px] text-[#cdcdcd]">
+            {skill.count}+ Years of Experience
+          </p>
         </div>
       ))}
     </div>
