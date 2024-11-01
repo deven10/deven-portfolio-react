@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-// import image1 from "../assets/deven-111.png";
 import image2 from "../assets/deven_blk-white.png";
+import resume from "../files/Deven Umrania - Resume.pdf";
 
 export const Intro = () => {
   return (
@@ -14,9 +13,16 @@ export const Intro = () => {
           Based in India, I&apos;m a front-end developer passionate about
           building accessible web apps that users love.
         </p>
-        <Link className="tracking-widest text-[15px] glowing-underline">
-          CONTACT ME
-        </Link>
+
+        <a
+          className="tracking-widest text-[14px] glowing-underline"
+          href={resume}
+          download
+          // target="_blank"
+          // rel="noreferrer"
+        >
+          DOWNLOAD RESUME
+        </a>
       </div>
       <div className="items-end flex">
         <img src={image2} alt="profile" width={375} height={375} />
