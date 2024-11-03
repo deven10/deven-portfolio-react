@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import { Intro } from "./components/Intro";
 import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Contact />
       <hr className="divider mb-10" />
       <Header />
+      <Toaster />
     </main>
   );
 }
