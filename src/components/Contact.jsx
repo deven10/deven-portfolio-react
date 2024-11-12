@@ -43,7 +43,7 @@ export const Contact = () => {
   return (
     <div className="flex justify-between pb-20">
       <div className="w-3/5">
-        <h2 className="mb-10 text-[62px] text-left leading-none max-w-min">
+        <h2 className="mb-10 headline text-left leading-none max-w-min">
           Contact
         </h2>
         <p className="mb-16 text-[15px] leading-relaxed text-wrap tracking-widest text-[#cdcdcd] w-[50%]">

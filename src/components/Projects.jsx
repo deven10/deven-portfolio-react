@@ -85,7 +85,7 @@ export const Projects = () => {
   return (
     <div className="pb-32">
       <div className="flex gap-5 mb-3 flex-wrap justify-between items-center">
-        <h2 className="mb-7 text-[62px] text-left leading-none max-w-min">
+        <h2 className="mb-7 headline text-left leading-none max-w-min">
           Projects
         </h2>
         <Link

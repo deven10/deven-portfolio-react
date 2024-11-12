@@ -5,11 +5,13 @@ export const Intro = () => {
   return (
     <div className="flex justify-between z-10 pb-28">
       <div className="flex flex-col items-start pt-28">
-        <p className="mb-7 text-[62px] leading-none">
+        <p className="mb-7 leading-none headline">
+          {/* text-[62px] */}
           Nice to meet you! <br /> I&apos;m{" "}
           <span className="glowing-underline">Deven Umrania</span>.
         </p>
-        <p className="mb-16 text-[15px] leading-relaxed text-[#cdcdcd] text-wrap tracking-widest w-[50%]">
+        <p className="mb-16 text-[15px] leading-relaxed tagline text-[#cdcdcd] text-wrap tracking-widest">
+          {/*  w-[50%] */}
           Based in India, I&apos;m a front-end developer passionate about
           building accessible web apps that users love.
         </p>

@@ -8,7 +8,7 @@ import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <main className="container">
+    <main className="container mx-auto">
       <Header />
       <Intro />
       <hr className="divider" />

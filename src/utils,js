@@ -1,0 +1,50 @@
+function extractDateInfo(d) {
+  return {
+    year: d.getFullYear(),
+    month: d.getMonth() + 1,
+    date: d.getDate(),
+  };
+}
+
+export function getExperience(startDate) {
+  const d = new Date(startDate);
+
+  // Check if the date is invalid
+  if (isNaN(d.getTime())) {
+    return "New to this tech";
+  }
+
+  const presentDate = new Date();
+
+  const startDateInfo = extractDateInfo(d);
+  const presentDateInfo = extractDateInfo(presentDate);
+
+  let yearDifference = presentDateInfo.year - startDateInfo.year;
+  let monthDifference = presentDateInfo.month - startDateInfo.month;
+
+  if (monthDifference < 0) {
+    yearDifference -= 1;
+    monthDifference += 12;
+  }
+
+  const totalMonths = yearDifference * 12 + monthDifference;
+
+  if (totalMonths < 6) {
+    return "New to this tech";
+  } else if (totalMonths < 12) {
+    return "0.5+ years of experience";
+  } else {
+    const fullYears = Math.floor(totalMonths / 12);
+    const extraMonths = totalMonths % 12;
+
+    const experience = extraMonths >= 6 ? `${fullYears}.5+` : `${fullYears}+`;
+    return `${experience} years of experience`;
+  }
+}
+
+// Testing the function with different dates
+// console.log(getExperience("2024-11-01")); // Output: "New to this tech"
+// console.log(getExperience("2023-11-01")); // Output: "1+ years of experience"
+// console.log(getExperience("2024-01-01")); // Output: "0.5+ years of experience"
+// console.log(getExperience("2022-03-01")); // Output: "2.5+ years of experience"
+// console.log(getExperience("invalid-date")); // Output: "New to this tech"
