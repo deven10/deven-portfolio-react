@@ -3,8 +3,8 @@ import resume from "../files/Deven Umrania - Resume.pdf";
 
 export const Intro = () => {
   return (
-    <div className="flex justify-between z-10 pb-28">
-      <div className="flex flex-col items-start pt-28">
+    <div className="flex justify-between z-10 pb-28 intro-main">
+      <div className="flex flex-col items-start pt-28 intro-content">
         <p className="mb-7 leading-none headline">
           {/* text-[62px] */}
           Nice to meet you! <br /> I&apos;m{" "}
@@ -26,7 +26,7 @@ export const Intro = () => {
           DOWNLOAD RESUME
         </a>
       </div>
-      <div className="items-end flex">
+      <div className="items-end flex profile-img">
         <img src={image2} alt="profile" width={375} height={375} />
       </div>
     </div>

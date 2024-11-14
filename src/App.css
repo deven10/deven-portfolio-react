@@ -84,10 +84,34 @@ button.glowing-underline:after {
 
 .headline {
   font-size: clamp(
-    2rem,
+    1.5rem,
     0.3043rem + 3.4783vw,
     3.875rem
-  ); /* max - 62px & min - 32px*/
+  ); /* max - 62px & min - 24px*/
+}
+
+.text-24min-32max {
+  font-size: clamp(
+    1.5rem,
+    0.3043rem + 3.4783vw,
+    2rem
+  ); /* max - 32px & min - 24px*/
+}
+
+.text-16min-18max {
+  font-size: clamp(
+    1.125rem,
+    0.3043rem + 1.5vw,
+    1rem
+  ); /* max - 18px & min - 16px*/
+}
+
+.text-14min-16max {
+  font-size: clamp(
+    0.875rem,
+    0.3043rem + 1.5vw,
+    1rem
+  ); /* max - 16px & min - 14px*/
 }
 
 .tagline {
@@ -97,6 +121,105 @@ button.glowing-underline:after {
 @media (max-width: 1024px) {
   .tagline {
     width: 75%;
+  }
+}
+
+@media (max-width: 575px) {
+  main .intro-main {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+    padding-bottom: 5rem;
+  }
+
+  .intro-main .intro-content {
+    padding-top: 32px;
+    align-items: center;
+  }
+
+  .intro-content .headline {
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .intro-content .tagline {
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile-img img {
+    height: 150px;
+    width: 150px;
+  }
+
+  main .wrapper {
+    margin: 80px 0px;
+  }
+
+  main .projects-main {
+    padding-bottom: 5rem;
+  }
+
+  .projects-main .projects-wrapper {
+    gap: 16px;
+  }
+
+  .projects-main .project-card {
+    gap: 14px;
+  }
+
+  .projects-main .project-card .project-links {
+    gap: 14px;
+  }
+
+  .projects-main .tech-wrapper {
+    row-gap: 6px;
+    column-gap: 14px;
+  }
+
+  .contact-main {
+    flex-direction: column;
+    padding-bottom: 3.5rem;
+  }
+
+  .contact-main .content {
+    width: 100%;
+  }
+
+  .contact-main .content h2 {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .contact-main .content p {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .contact-main .contact-form {
+    width: 100%;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 450px) {
+  .projects-main .project-card {
+    gap: 14px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .project-card .project-name {
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+
+  .projects-main .tech-wrapper {
+    row-gap: 2px;
+    column-gap: 14px;
   }
 }
 

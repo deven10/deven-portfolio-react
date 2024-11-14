@@ -57,8 +57,8 @@ export const Skills = () => {
     <div className="wrapper">
       {skills.map((skill, index) => (
         <div key={skill.skill} className={`item item${index + 1}`}>
-          <p className="mb-2 text-[32px] text-[#fff]">{skill.skill}</p>
-          <p className="m-0 text-[16px] text-[#cdcdcd]">
+          <p className="mb-2 text-24min-32max text-[#fff]">{skill.skill}</p>
+          <p className="m-0 text-14min-16max text-[#cdcdcd]">
             {getExperience(skill.startedFrom)}
           </p>
         </div>

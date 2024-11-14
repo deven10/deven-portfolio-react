@@ -83,8 +83,8 @@ export const Projects = () => {
     // },
   ];
   return (
-    <div className="pb-32">
-      <div className="flex gap-5 mb-3 flex-wrap justify-between items-center">
+    <div className="pb-32 projects-main">
+      <div className="flex gap-5 mb-3 flex-wrap justify-between items-start">
         <h2 className="mb-7 headline text-left leading-none max-w-min">
           Projects
         </h2>
@@ -96,17 +96,17 @@ export const Projects = () => {
           VIEW ALL
         </Link>
       </div>
-      <div className="flex flex-wrap gap-6">
+      <div className="flex flex-wrap gap-6 projects-wrapper">
         {projects.map((project) => (
           <div key={project.name} className="project-card flex gap-5">
             <div>
-              <p className="text-[20px] text-[#fff] tracking-wider mb-1">
+              <p className="project-name text-16min-18max text-[#fff] tracking-wider mb-1">
                 {project.name}
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 tech-wrapper">
                 {project.tech.map((tech) => (
                   <span
-                    className="text-[16px] tracking-wide text-[#CDCDCD]"
+                    className="text-14min-16max tracking-wide text-[#CDCDCD]"
                     key={tech}
                   >
                     {tech}
@@ -114,7 +114,7 @@ export const Projects = () => {
                 ))}
               </div>
             </div>
-            <div className="flex gap-5 mt-1.5">
+            <div className="flex gap-5 mt-1.5 project-links">
               <Link
                 to={project.website}
                 target="_blank"
