@@ -125,6 +125,10 @@ button.glowing-underline:after {
 }
 
 @media (max-width: 575px) {
+  main .icons {
+    padding-right: 0px;
+  }
+
   main .intro-main {
     flex-direction: column-reverse;
     align-items: center;
@@ -172,7 +176,7 @@ button.glowing-underline:after {
   }
 
   .projects-main .project-card .project-links {
-    gap: 14px;
+    gap: 16px;
   }
 
   .projects-main .tech-wrapper {
@@ -214,7 +218,7 @@ button.glowing-underline:after {
 
   .project-card .project-name {
     line-height: 1.25;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .projects-main .tech-wrapper {
