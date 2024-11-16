@@ -1,5 +1,7 @@
+import { Fragment } from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
 
 export const SocialLinks = () => {
   const links = [
@@ -21,16 +23,19 @@ export const SocialLinks = () => {
   ];
   return (
     <div className="icons flex gap-[25px] pr-6">
-      {links.map((link, index) => (
-        <Link
-          key={index}
-          className="cursor-pointer h-4 w-4"
-          to={link.link}
-          target="_blank"
-          title={link.type}
-        >
-          {link.component}
-        </Link>
+      {links.map((link) => (
+        <Fragment key={link.type}>
+          <Link
+            className="cursor-pointer h-4 w-4"
+            to={link.link}
+            target="_blank"
+            data-tooltip-id={link.type}
+            data-tooltip-content={link.type}
+          >
+            {link.component}
+          </Link>
+          <Tooltip id={link.type} />
+        </Fragment>
       ))}
     </div>
   );

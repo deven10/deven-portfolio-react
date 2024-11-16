@@ -1,4 +1,5 @@
 import "./App.css";
+import "react-tooltip/dist/react-tooltip.css";
 import { Contact } from "./components/Contact";
 import { Header } from "./components/Header";
 import { Intro } from "./components/Intro";

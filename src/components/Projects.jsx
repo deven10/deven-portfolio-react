@@ -1,5 +1,6 @@
 import { FaGlobe, FaCode } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
 
 export const Projects = () => {
   const projects = [
@@ -118,19 +119,31 @@ export const Projects = () => {
               <Link
                 to={project.website}
                 target="_blank"
-                title="Website"
+                // title="Website"
                 className="max-h-4"
+                data-tooltip-id={project.website}
+                data-tooltip-content={"Website"}
               >
                 <FaGlobe />
               </Link>
+              <Tooltip
+                id={project.website}
+                style={{ backgroundColor: "#151515" }}
+              />
               <Link
                 to={project.code}
                 target="_blank"
-                title="Code"
+                // title="Code"
                 className="max-h-4"
+                data-tooltip-id={project.code}
+                data-tooltip-content={"Code"}
               >
                 <FaCode />
               </Link>
+              <Tooltip
+                id={project.code}
+                style={{ backgroundColor: "#151515" }}
+              />
             </div>
           </div>
         ))}
