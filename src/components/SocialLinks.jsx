@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
+
 import { Link } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 
@@ -19,6 +21,11 @@ export const SocialLinks = () => {
       link: "https://x.com/dumrania2000",
       component: <FaTwitter />,
       type: "Twitter",
+    },
+    {
+      link: "https://api.whatsapp.com/send/?phone=%2B918355916480&text&type=phone_number&app_absent=0",
+      component: <IoLogoWhatsapp />,
+      type: "Whatsapp",
     },
   ];
   return (
