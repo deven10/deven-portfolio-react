@@ -1,5 +1,6 @@
 import image2 from "../assets/deven_blk-white.png";
-import resume from "../files/Deven Umrania - Resume.pdf";
+// import resume from "../files/Deven Umrania - Resume.pdf";
+import resume from "../files/Deven Resume.pdf";
 
 export const Intro = () => {
   return (
