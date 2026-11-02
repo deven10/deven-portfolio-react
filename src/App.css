@@ -159,10 +159,6 @@ button.glowing-underline:after {
     width: 150px;
   }
 
-  main .wrapper {
-    margin: 80px 0px;
-  }
-
   main .projects-main {
     padding-bottom: 5rem;
   }
@@ -320,79 +316,96 @@ button.glowing-underline:after {
 
 /* --------------- */
 
-.wrapper {
-  width: 100%;
-  margin-top: 4rem;
-  margin-bottom: 8rem;
-  position: relative;
-  height: 110px;
-  overflow: hidden;
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-  );
+.skill-group {
+  background-color: #1c1c1c;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 28px 32px;
+  transition: border-color 0.3s ease;
 }
 
-@keyframes scrollLeft {
-  to {
-    left: -200px;
-  }
+.skill-group:hover {
+  border-color: #3a3a3a;
 }
 
-.item {
-  width: 250px;
-  height: 110px;
-  padding: 16px 0px;
-  text-align: center;
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 999px;
   background-color: #242424;
-  border-radius: 6px;
-  position: absolute;
-  left: max(calc(250px * 10), 100%);
-  animation-name: scrollLeft;
-  animation-duration: 30s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  border: 1px solid #2f2f2f;
+  color: #cdcdcd;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  transition: color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 
-.item1 {
-  animation-delay: calc(30s / 10 * (10 - 1) * -1);
+.skill-chip .skill-icon {
+  font-size: 18px;
+  color: #8a8a8a;
+  transition: color 0.25s ease;
 }
 
-.item2 {
-  animation-delay: calc(30s / 10 * (10 - 2) * -1);
+.skill-chip:hover {
+  color: #fff;
+  border-color: var(--brand);
+  transform: translateY(-2px);
 }
 
-.item3 {
-  animation-delay: calc(30s / 10 * (10 - 3) * -1);
+.skill-chip:hover .skill-icon {
+  color: var(--brand);
 }
 
-.item4 {
-  animation-delay: calc(30s / 10 * (10 - 4) * -1);
+.featured-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1c1c;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 32px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-.item5 {
-  animation-delay: calc(30s / 10 * (10 - 5) * -1);
+.featured-card:hover {
+  border-color: #4de39c;
+  transform: translateY(-4px);
 }
 
-.item6 {
-  animation-delay: calc(30s / 10 * (10 - 6) * -1);
+.featured-card .featured-arrow {
+  flex-shrink: 0;
+  color: #8a8a8a;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.item7 {
-  animation-delay: calc(30s / 10 * (10 - 7) * -1);
+.featured-card:hover .featured-arrow {
+  color: #4de39c;
+  transform: translate(3px, -3px);
 }
 
-.item8 {
-  animation-delay: calc(30s / 10 * (10 - 8) * -1);
+.tech-pill {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background-color: #242424;
+  color: #cdcdcd;
+  font-size: 13px;
+  letter-spacing: 0.03em;
 }
 
-.item9 {
-  animation-delay: calc(30s / 10 * (10 - 9) * -1);
-}
+@media (max-width: 575px) {
+  main .skills-main {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
 
-.item10 {
-  animation-delay: calc(30s / 10 * (10 - 10) * -1);
+  .skill-group,
+  .featured-card {
+    padding: 22px 20px;
+  }
+
+  .skill-chip {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
 }

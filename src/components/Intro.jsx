@@ -5,7 +5,7 @@ import resume from "../files/Deven Resume.pdf";
 export const Intro = () => {
   return (
     <div className="flex justify-between z-10 pb-28 intro-main">
-      <div className="flex flex-col items-start pt-28 intro-content">
+      <div className="flex flex-1 flex-col items-start pt-28 intro-content">
         <p className="mb-7 leading-none headline">
           {/* text-[62px] */}
           Nice to meet you! <br /> I&apos;m{" "}
@@ -13,8 +13,9 @@ export const Intro = () => {
         </p>
         <p className="mb-16 text-[15px] leading-relaxed tagline text-[#cdcdcd] text-wrap tracking-widest">
           {/*  w-[50%] */}
-          Based in India, I&apos;m a front-end developer passionate about
-          building accessible web apps that users love.
+          Based in India, I&apos;m a full-stack developer who builds fast,
+          scalable web apps with React, Next.js and Node.js, from pixel-perfect
+          UIs to production APIs.
         </p>
 
         <a
